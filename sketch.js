@@ -24,6 +24,8 @@ function setup() {
   textSize(20);
 
   fill("#333333");
+  
+  createEdgeSprites();
 
 }
 
