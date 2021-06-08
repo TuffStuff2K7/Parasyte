@@ -1,5 +1,7 @@
 function movementCheck(){
-
+    
+    bug.collide(edges);
+        
     if(keyDown("right")){
       if(xVel < 3){
         xVel += 0.25;
