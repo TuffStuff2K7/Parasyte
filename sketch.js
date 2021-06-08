@@ -40,6 +40,6 @@ function draw() {
   text("Health: " + health, 10, 20);
   text("Exp: " + xp + " [Level " + level + "]", 10, 40);
 
-  text("Parasyte Beta 1.0.1", 10, height - 10);
+  text("Parasyte Alpha 1.0.1", 10, height - 10);
 
 }
