@@ -16,16 +16,18 @@ function setup() {
 
   createCanvas(800,600);
 
-  bug = createSprite(width/2, height/2, 20, 20);
+  edges = createEdgeSprites();
+
+  bug = createSprite(width/2, height/2);
+  bug.setCollider("rectangle", 0, 5, 40, 30);
   bug.addAnimation("normal", bugAnim);
   bug.scale = 2;
+  bug.debug = true;
 
   textFont(font);
   textSize(20);
 
   fill("#333333");
-  
-  createEdgeSprites();
 
 }
 
