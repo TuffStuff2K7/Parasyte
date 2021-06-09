@@ -1,27 +1,29 @@
 function movementCheck(){
 
-  if(keyDown("right")){
+  if(keyDown("right") || keyDown("d")){
     if(xVel < 3){
       xVel += 0.25;
+      bug.changeAnimation("right");
     }
   }
-  if(keyDown("left")){
+  if(keyDown("left") || keyDown("a")){
     if(xVel > -3){
       xVel -= 0.25;
+      bug.changeAnimation("left");
     }
   }
-  if(keyDown("down")){
+  if(keyDown("down") || keyDown("s")){
     if(yVel < 3){
       yVel += 0.25;
     }
   }
-  if(keyDown("up")){
+  if(keyDown("up") || keyDown("w")){
     if(yVel > -3){
       yVel -= 0.25;
     }
   }
   
-  if(xVel !== 0 && !keyDown("left") && !keyDown("right")){
+  if(xVel !== 0 && !keyDown("left") && !keyDown("right") && !keyDown("a") && !keyDown("d")){
     if(xVel > 0){
       xVel -= 0.25;
     }
@@ -30,7 +32,7 @@ function movementCheck(){
     }
   }
   
-  if(yVel !== 0 && !keyDown("up") && !keyDown("down")){
+  if(yVel !== 0 && !keyDown("up") && !keyDown("down") && !keyDown("w") && !keyDown("s")){
     if(yVel > 0){
       yVel -= 0.25;
     }
