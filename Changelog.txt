@@ -1,1 +1,7 @@
+Alpha Development Changelog 
 
+1.0 : Parasyte Alpha, sprite created, basic movement.
+  1.0.1 : Html title and browser favicon added. Parasyte now faces left and right when moved.
+1.1 : Added spawning and movement algorithms for mobs. 1 Tier-5 mob always spawns at the start. Animation for capture added in files.
+  1.1.1 : Mobs despawn when moving out of screen.
+  1.1.2 : Added WASD controls.  
