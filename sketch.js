@@ -1,11 +1,11 @@
 var bug;
 var font, leftAnim, rightAnim;
 
-var mobCheck = [];
-
 var xVel = 0, yVel = 0;
 
 var health = 100, xp = 0, level = 1;
+
+var people = [];
 
 function preload(){
   
@@ -27,7 +27,6 @@ function setup() {
   bug.addAnimation("right", rightAnim);
   bug.addAnimation("left", leftAnim);
   bug.addAnimation("inf",infAnim);
-  bug.scale = 2;
   //bug.debug = true;
 
   textFont(font);
@@ -35,22 +34,24 @@ function setup() {
 
   fill("#333333");
 
-  test01 = new Animal(4,100,100);
+  for(var i = 0; i < 20; i++){
+    people.push(new Human());
+  }
 
 }
 
 function draw() {
 
   background("#9fe6a0");
-
   movementCheck();
-  test01.movement();
-
   drawSprites();
 
-  text("Health: " + health, 10, 20);
-  text("Exp: " + xp + " [Level " + level + "]", 10, 40);
+  for(var i = 0; i < people.length; i++){
+    people[i].move();
+    people[i].render();
+  }
 
+  text("Health: " + health, 10, 20);
   text("Parasyte Alpha 1.1.2", 10, height - 10);
 
 }

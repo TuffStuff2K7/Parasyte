@@ -1,24 +1,24 @@
 function movementCheck(){
 
   if(keyDown("right") || keyDown("d")){
-    if(xVel < 3){
+    if(xVel < 5){
       xVel += 0.25;
       bug.changeAnimation("right");
     }
   }
   if(keyDown("left") || keyDown("a")){
-    if(xVel > -3){
+    if(xVel > -5){
       xVel -= 0.25;
       bug.changeAnimation("left");
     }
   }
   if(keyDown("down") || keyDown("s")){
-    if(yVel < 3){
+    if(yVel < 5){
       yVel += 0.25;
     }
   }
   if(keyDown("up") || keyDown("w")){
-    if(yVel > -3){
+    if(yVel > -5){
       yVel -= 0.25;
     }
   }
